@@ -2,11 +2,13 @@ from machine import Pin
 import tm1637
 from utime import sleep
 
-display = tm1637.TM1637(clk=Pin(9), dio=Pin(23))
+display = tm1637.TM1637(clk=Pin(17), dio=Pin(16))
 
-hour = 16
+hour = 20
 
-minute = 39
+minute = 38
+
+print('Hello')
 
 while True:
     display.numbers(hour, minute)
@@ -17,4 +19,4 @@ while True:
         minute = 00
         hour = hour+1
     if hour >= 24:
-        hour = 00                  
+        hour = 00   
